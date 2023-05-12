@@ -2,7 +2,7 @@
 
 name: Build Plugin
 
-on: [push]
+on: push
 
 jobs:
   build:
@@ -15,7 +15,7 @@ jobs:
         run: git fetch --unshallow --filter=tree:0 origin $GITHUB_REF
 
       - name: Determine version
-        run: echo version="$(git describe --always --tags --match 'v*' ${{github.sha}})" >> $GITHUB_ENV
+        run: echo version="$(git describe --always --tags --match '*' ${{github.sha}})" >> $GITHUB_ENV
 
       - name: Install Python
         uses: actions/setup-python@v2

@@ -59,11 +59,11 @@ def package(file, version, vendorInfo, changeFile, descFile):
     <vendor email="{email}" url="{url}">{vendor}</vendor>
     
     <description><![CDATA[
-        {descr}
+{descr}
     ]]></description>
     
     <change-notes><![CDATA[
-        {change}
+{change}
     ]]></change-notes>
     
     <idea-version since-build="142.0"/>
@@ -71,7 +71,7 @@ def package(file, version, vendorInfo, changeFile, descFile):
     <depends>com.intellij.modules.lang</depends>
     
     <extensions defaultExtensionNs="com.intellij">
-      <bundledColorScheme path="colors/{theme_name}" />
+      <bundledColorScheme path="/colors/{theme_name}" />
     </extensions>
 </idea-plugin>
     """)
@@ -85,4 +85,4 @@ def package(file, version, vendorInfo, changeFile, descFile):
 
 
 if __name__ == "__main__":
-    package("EclipseDarkLike.icls", sys.argv[1], ("Wagyourtail", "wagyourtail@wagyourtail.xyz", "https://wagyourtail.xyz"), "desc.md", "change.md")
+    package("EclipseDarkLike.icls", sys.argv[1], ("Wagyourtail", "wagyourtail@wagyourtail.xyz", "https://wagyourtail.xyz"), "change.md", "desc.md")
