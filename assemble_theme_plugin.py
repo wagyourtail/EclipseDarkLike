@@ -85,4 +85,4 @@ def package(file, version, vendorInfo, changeFile, descFile):
 
 
 if __name__ == "__main__":
-    package("EclipseDarkLike.icls", sys.argv[1], ("Wagyourtail", "wagyourtail@wagyourtail.xyz", "https://wagyourtail.xyz"), "change.md", "desc.md")
+    package("EclipseDarkLike.icls", sys.argv[1], ("Wagyourtail", "wagyourtail@wagyourtail.xyz", "https://github.com/wagyourtail/EclipseDarkLike"), "change.md", "desc.md")
