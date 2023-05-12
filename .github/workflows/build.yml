@@ -1,0 +1,33 @@
+
+
+name: Build Plugin
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Fetch history
+        run: git fetch --unshallow --filter=tree:0 origin $GITHUB_REF
+
+      - name: Determine version
+        run: echo version="$(git describe --always --tags --match 'v*' ${{github.sha}})" >> $GITHUB_ENV
+
+      - name: Install Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: Package Plugin
+        run: python assemble_theme_plugin.py ${{env.version}}
+
+      - name: Upload Plugin
+        uses: actions/upload-artifact@v2
+        with:
+          name: theme-plugin-data
+          path: build/*
+
