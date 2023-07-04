@@ -82,7 +82,5 @@ def package(file, version, vendorInfo, changeFile, descFile):
                 zip.write(os.path.join(root, file), os.path.relpath(os.path.join(root, file), os.path.join(f"./build/{fname}")))
 
 
-
-
 if __name__ == "__main__":
     package("EclipseDarkLike.icls", sys.argv[1], ("Wagyourtail", "wagyourtail@wagyourtail.xyz", "https://github.com/wagyourtail/EclipseDarkLike"), "change.md", "desc.md")

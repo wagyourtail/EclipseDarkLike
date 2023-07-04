@@ -22,7 +22,7 @@ jar literally contains the source code_
 1. Install from the [JetBrains Plugin Repository](https://plugins.jetbrains.com/plugin/17464-eclipsedarklike-color-scheme)
 
 ### Manual (icls file)
-1. Download the [EclipseDarkLike](./EclipseDarkLike.icls) file
+1. Download the [EclipseDarkLike](./EclipseDarkLike-Dark.icls) file
 2. Open IntelliJ IDEA
 3. Go to `File | Settings | Editor | Color Scheme`
 4. Click the gear icon and select `Import Scheme`
